@@ -1,0 +1,5 @@
+* Needed Features
+** Control features
+*** Dialog to turn on/off localStorage, etc.
+** Change url QLineEdit on redirects, link changes, etc.
+** Make Back work.
