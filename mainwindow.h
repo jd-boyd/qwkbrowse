@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QOpenGLWidget>
 #include <QGraphicsScene>
 #include <QGraphicsWebView>
 
@@ -19,6 +20,9 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+protected:
+    virtual void resizeEvent(QResizeEvent * event) override;
+
 public slots:
    void file_quit();
 
@@ -32,6 +36,8 @@ private:
     QGraphicsScene scene;
     QGraphicsWebView webview;
     WebPage page;
+    QOpenGLWidget gl;
+
 };
 
 #endif // MAINWINDOW_H
